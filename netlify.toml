@@ -1,0 +1,12 @@
+# Netlify configuration for Epoch AI (Next.js 14, App Router).
+# The Netlify Next.js Runtime is auto-installed and auto-detected — App Router,
+# SSR, and the /api/subscribe route handler all run as serverless functions.
+# No plugin needs to be pinned here (Netlify recommends against pinning it).
+
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  # Next.js 14 requires Node 18.17+. Pin a current LTS for reproducible builds.
+  NODE_VERSION = "20"
