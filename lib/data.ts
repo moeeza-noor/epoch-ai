@@ -1,6 +1,6 @@
 // Central, typed content for the site. Edit copy here — components stay untouched.
 
-export type ProjectCategory = "ai" | "voice" | "vision";
+export type ProjectCategory = "apps" | "agents" | "ai" | "vision";
 
 export interface Service {
   title: string;
@@ -31,12 +31,27 @@ export interface Quote {
 
 export const PROJECT_FILTERS: { label: string; value: "all" | ProjectCategory }[] = [
   { label: "All", value: "all" },
-  { label: "AI", value: "ai" },
-  { label: "Voice", value: "voice" },
+  { label: "Apps", value: "apps" },
+  { label: "Agents", value: "agents" },
+  { label: "AI Systems", value: "ai" },
   { label: "Vision", value: "vision" },
 ];
 
 export const projects: Project[] = [
+  {
+    title: "Fieldwise",
+    category: "apps",
+    teaser: "The everyday app that plans your day for you.",
+    detail:
+      "A consumer productivity app that turns a messy to-do list into a realistic day plan — reprioritizing itself in real time as meetings move and things change, so people spend less time managing their day and more time living it.",
+  },
+  {
+    title: "OpsPilot",
+    category: "agents",
+    teaser: "A multi-agent framework that runs back-office work end to end.",
+    detail:
+      "An agentic framework where specialized agents plan, execute, and check each other's work across ticketing, billing, and reporting tools — with a human sign-off built into every step that matters.",
+  },
   {
     title: "Smart City AI",
     category: "ai",
@@ -46,17 +61,17 @@ export const projects: Project[] = [
   },
   {
     title: "Voice Guardian",
-    category: "voice",
+    category: "apps",
     teaser: "Private, on-device voice AI for sensitive fields.",
     detail:
-      "A privacy-first voice assistant for healthcare and legal settings. All processing stays on-device, so sensitive conversations never leave the room.",
+      "A privacy-first voice assistant for healthcare and legal settings. All processing stays on-device, so sensitive conversations never leave the room — built as a real product, not a research demo.",
   },
   {
     title: "Generative Ads",
-    category: "ai",
-    teaser: "Brand-consistent content, generated at scale.",
+    category: "agents",
+    teaser: "An autonomous pipeline for brand-consistent content, at scale.",
     detail:
-      "A brand-safe generative studio that produces on-message creative at scale — every asset guardrailed to a brand's voice, palette, and guidelines.",
+      "A brand-safe generative pipeline where coordinating agents draft, check, and refine creative against a brand's voice, palette, and guidelines — producing on-message assets at a scale no single team could match.",
   },
   {
     title: "Inclusive OCR",
@@ -71,7 +86,8 @@ export const quotes: Quote[] = [
   { lead: "The future belongs to those who design it — ", emphasis: "responsibly." },
   { lead: "Code like a girl. Change the world like a ", emphasis: "woman." },
   { lead: "Epochs don't start by chance. They're ", emphasis: "led." },
-  { lead: "We bloom in ", emphasis: "code." },
+  { lead: "We don't just train models. We ", emphasis: "ship products." },
+  { lead: "Great agents don't replace people — they ", emphasis: "free them." },
   { lead: "AI with empathy is our ", emphasis: "superpower." },
 ];
 
@@ -80,21 +96,22 @@ export const founders: Founder[] = [
     name: "Moeeza Noor",
     initials: "MN",
     role: "AI Engineer · Co-founder",
-    bio: "Leads model research and the systems that put it into production — with an eye on the human it serves.",
+    bio: "Leads model research and the agentic systems that put it into production — with an eye on the human it serves.",
   },
   {
     name: "Kiran Sardar",
     initials: "KS",
-    role: "ML Strategist · Co-founder",
-    bio: "Shapes where the work goes next — aligning research, ethics, and real client outcomes.",
+    role: "Product Strategist · Co-founder",
+    bio: "Shapes where the product goes next — aligning applications, agents, and real client outcomes.",
     variant: "alt",
   },
 ];
 
 export const marqueeItems = [
+  "AI Applications",
+  "Agentic Frameworks",
   "Machine Learning",
-  "Natural Language",
-  "Computer Vision",
-  "Generative AI",
+  "Automation",
+  "Product Engineering",
   "Ethical by design",
 ];
